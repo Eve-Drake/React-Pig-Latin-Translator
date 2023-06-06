@@ -3,9 +3,11 @@ import './index.css'
 
 function App() {
   const [translatedString, setTranslatedString] = useState('')
+  const vowels = ['a', 'e', 'i', 'o', 'u']
 
   const translate = (sentence) =>{
-    setTranslatedString(sentence + ' translation')
+    let lowerCase = sentence.toLowerCase()
+    setTranslatedString(lowerCase)
   }
 
   return (
