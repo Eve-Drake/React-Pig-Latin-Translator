@@ -3,11 +3,25 @@ import './index.css'
 
 function App() {
   const [translatedString, setTranslatedString] = useState('')
-  const vowels = ['a', 'e', 'i', 'o', 'u']
+
 
   const translate = (sentence) =>{
-    let lowerCase = sentence.toLowerCase()
-    setTranslatedString(lowerCase)
+    let lowerCase = sentence.trim().toLowerCase()
+    let stringWordArray = lowerCase.split(' ')
+    for (let i = 0; i < stringWordArray.length; i++ ){
+      let currentWord = stringWordArray[i]
+      if(currentWord[0] === 'a' || currentWord[0] === 'e' || currentWord[0] === 'i' || currentWord[0] === 'o' || currentWord[0] === 'u'){
+        currentWord = currentWord + 'ay'
+        stringWordArray.splice(i, 1, currentWord)
+      }
+      else{
+        let firstLetter = currentWord[0]
+        currentWord = currentWord.substring(1)
+        currentWord = currentWord + firstLetter + 'ay'
+        stringWordArray.splice(i, 1 ,currentWord)
+      }
+    }
+    setTranslatedString(stringWordArray.join(' '))
   }
 
   return (
@@ -16,7 +30,7 @@ function App() {
         <h1>{translatedString}</h1>
       </div>
       <input 
-        type='string'
+        type='text'
         onChange={e =>translate(e.target.value)}
       />
       
