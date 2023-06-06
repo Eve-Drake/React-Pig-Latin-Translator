@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './index.css'
 
 function App() {
-  const [string, setString] = useState('')
   const [translatedString, setTranslatedString] = useState('')
 
   const translate = (sentence) =>{
@@ -12,7 +11,7 @@ function App() {
   return (
     <>
       <div className='translation'>
-        {translatedString}
+        <h1>{translatedString}</h1>
       </div>
       <input 
         type='string'
