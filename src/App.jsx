@@ -29,6 +29,7 @@ function App() {
       <div className='translation'>
         <h1>{translatedString}</h1>
       </div>
+      
       <input 
         type='text'
         onChange={e =>translate(e.target.value)}
