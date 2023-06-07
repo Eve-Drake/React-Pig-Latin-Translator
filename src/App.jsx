@@ -30,7 +30,8 @@ function App() {
         <h1>{translatedString}</h1>
       </div>
       
-      <input 
+      <textarea
+      placeholder='Enter your sentence'
         type='text'
         onChange={e =>translate(e.target.value)}
       />
