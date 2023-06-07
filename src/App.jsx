@@ -27,7 +27,8 @@ function App() {
   return (
     <>
       <div className='translation'>
-        <h1>{translatedString}</h1>
+        <h1>Pig Latin Translator</h1>
+        <h2>{translatedString}</h2>
       </div>
       
       <textarea

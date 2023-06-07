@@ -4,7 +4,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
-input{
-  width: 50vw;
+textarea{
+  width: 98vw;
   height: 20vh;
+}
+
+.translation{
+ text-align: center;
 }
